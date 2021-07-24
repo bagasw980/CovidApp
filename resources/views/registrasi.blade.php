@@ -21,13 +21,14 @@
             <div class="card-header border-secondary"><i class="fa fa-edit"></i> Form Registrasi Vaksinasi</div>
             <div class="card-body">
                 <div class=" d-flex flex-column align-items-center mt-3 mb-5">
-                    <form class="col-md-8">
+                    <form class="col-md-8" action="/registrasi-vaksinasi/post" method="POST">
+                      @csrf
                         <div class="row align-items-start mb-3">
                             <div class="col-sm-4">
                               <label for="nik" class="col-form-label text-right">NIK :</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="number" class="form-control" id="nik" name="nik" aria-describedby="nikHelp">
+                                <input type="number" class="form-control" id="nik" name="nik" aria-describedby="nikHelp" required>
                                 <div id="nikHelp" class="form-text">Isi Sesuai KTP</div>
                             </div>
                         </div>
@@ -36,7 +37,7 @@
                               <label for="nama" class="col-form-label text-right">Nama Lengkap :</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="number" class="form-control" id="nama" name="nama" aria-describedby="namaHelp">
+                                <input type="text" class="form-control" id="nama" name="nama" aria-describedby="namaHelp" required>
                                 <div id="namaHelp" class="form-text">Isi Sesuai KTP</div>
                             </div>
                         </div>
@@ -46,13 +47,13 @@
                             </div>
                             <div class="col-sm-8">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kelamin" id="laki">
+                                    <input class="form-check-input" type="radio" name="kelamin" value="laki" id="laki" required>
                                     <label class="form-check-label" for="laki">
                                       Laki-laki
                                     </label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kelamin" id="perempuan">
+                                    <input class="form-check-input" type="radio" name="kelamin" value="perempuan" id="perempuan" required>
                                     <label class="form-check-label" for="perempuan">
                                       Perempuan
                                     </label>
@@ -61,10 +62,10 @@
                         </div>
                         <div class="row align-items-start mb-3">
                             <div class="col-sm-4">
-                              <label for="lahir" class="col-form-label text-right">Tanggal LAhir :</label>
+                              <label for="lahir" class="col-form-label text-right">Tanggal Lahir :</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="date" class="form-control" id="lahir" name="lahir" aria-describedby="lahirHelp">
+                                <input type="date" class="form-control" id="lahir" name="lahir" aria-describedby="lahirHelp" required>
                             </div>
                         </div>
                         <div class="row align-items-start mb-3">
@@ -73,21 +74,21 @@
                             </div>
                             <div class="col-sm-8">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kategori" id="umum">
+                                    <input class="form-check-input" type="radio" name="kategori" value="umum" required id="umum">
                                     <label class="form-check-label" for="umum">
-                                      Umum dan Remaja
+                                      Umum dan Remaja (Usia 12 - 17 tahun)
                                     </label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kategori" id="pra-lansia">
+                                    <input class="form-check-input" type="radio" name="kategori" value="pra-lansia" required id="pra-lansia">
                                     <label class="form-check-label" for="pra-lansia">
-                                      Pra Lansia
+                                      Pra Lansia (Usia >=50 tahun)
                                     </label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kategori" id="lansia">
+                                    <input class="form-check-input" type="radio" name="kategori" value="lansia" required id="lansia">
                                     <label class="form-check-label" for="lansia">
-                                      Lansia
+                                      Lansia (Usia >= 60 tahun)
                                     </label>
                                   </div>
                             </div>
@@ -97,10 +98,21 @@
                               <label for="nohp" class="col-form-label text-right">No HP :</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="number" class="form-control" id="nohp" name="nohp" aria-describedby="nohpHelp">
+                                <input type="number" class="form-control" id="nohp" name="nohp" aria-describedby="nohpHelp" required>
                                 <div id="nohpHelp" class="form-text">Isi nomor yang bisa dihubungi</div>
                             </div>
                         </div>
+                        
+                        <div class="row align-items-start mb-3">
+                            <div class="col-sm-4">
+                              <label for="alamat" class="col-form-label text-right">No HP :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="alamat" name="alamat" aria-describedby="alamatHelp" required></textarea>
+                                <div id="alamatHelp" class="form-text">Isi sesuai KTP</div>
+                            </div>
+                        </div>
+
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
