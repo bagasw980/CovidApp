@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DataRujukanController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegistrasiVaksinController;
+use App\Http\Controllers\StatitiskaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/statitiska', [StatitiskaController::class, 'index']);
+Route::get('/rumah-sakit-rujukan', [DataRujukanController::class, 'index']);
+Route::get('/registrasi-vaksinasi', [RegistrasiVaksinController::class, 'index']);

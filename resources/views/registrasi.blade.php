@@ -69,7 +69,7 @@
                         </div>
                         <div class="row align-items-start mb-3">
                             <div class="col-sm-4">
-                              <label for="umum" class="col-form-label text-right">Jenis Kelamin :</label>
+                              <label for="umum" class="col-form-label text-right">Kategori :</label>
                             </div>
                             <div class="col-sm-8">
                                 <div class="form-check">

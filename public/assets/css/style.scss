@@ -94,6 +94,9 @@ main {
                 }
                 p {
                     font-size: 20px;
+                    span {
+                        font-size: 15px;
+                    }
                 }
             }
         }
@@ -104,12 +107,64 @@ main {
         padding: 30px;
         margin: 20px 0px;
         border: 1px solid gray;
-        border-top: 5px solid $primary;
+        border-top: 5px solid $secondary;
         border-radius: 10px;
         background-color: #ddd;
         .card {
             .card-header {
-                background-color: $secondary;
+                background-color: $primary;
+                font-weight: bolder;
+                color: white;
+                letter-spacing: 0.5px;
+            }
+            .card-body {
+                background-color: white;
+                color: #333;
+                padding: 20px 30px;
+            }
+        }
+    }
+    .rumah-sakit {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        margin: 20px 0px;
+        border: 1px solid gray;
+        border-top: 5px solid $secondary;
+        border-radius: 10px;
+        background-color: #ddd;
+        .card {
+            .card-header {
+                background-color: $primary;
+                font-weight: bolder;
+                color: white;
+                letter-spacing: 0.5px;
+            }
+            .card-body {
+                background-color: white;
+                color: #333;
+                padding: 20px 30px;
+                .dataTables_length {
+                    margin-bottom: 30px;
+                }
+                .dataTables_filter {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .statitiska {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        margin: 20px 0px;
+        border: 1px solid gray;
+        border-top: 5px solid $secondary;
+        border-radius: 10px;
+        background-color: #ddd;
+        .card {
+            .card-header {
+                background-color: $primary;
                 font-weight: bolder;
                 color: white;
                 letter-spacing: 0.5px;

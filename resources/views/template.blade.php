@@ -15,10 +15,10 @@
         <div class="logo">Covid<span>App</span></div>
         <div class="navbar">
             <ul>
-                <a href=""><li>Beranda</li></a>
-                <a href=""><li>Statitiska</li></a>
-                <a href=""><li>Data Rumah Sakit Rujukan Covid-19</li></a>
-                <a href=""><li>Registrasi Vaksinasi Covid</li></a>
+                <a href="/"><li>Beranda</li></a>
+                <a href="/statitiska"><li>Statitiska</li></a>
+                <a href="/rumah-sakit-rujukan"><li>Data Rumah Sakit Rujukan Covid-19</li></a>
+                <a href="/registrasi-vaksinasi"><li>Registrasi Vaksinasi Covid</li></a>
             </ul>
         </div>
     </nav>

@@ -94,23 +94,74 @@ main .beranda .data-indonesia .box h3 {
 main .beranda .data-indonesia .box p {
   font-size: 20px;
 }
+main .beranda .data-indonesia .box p span {
+  font-size: 15px;
+}
 main .registrasi {
   width: 100%;
   height: auto;
   padding: 30px;
   margin: 20px 0px;
   border: 1px solid gray;
-  border-top: 5px solid #006fff;
+  border-top: 5px solid #ff7000;
   border-radius: 10px;
   background-color: #ddd;
 }
 main .registrasi .card .card-header {
-  background-color: #ff7000;
+  background-color: #006fff;
   font-weight: bolder;
   color: white;
   letter-spacing: 0.5px;
 }
 main .registrasi .card .card-body {
+  background-color: white;
+  color: #333;
+  padding: 20px 30px;
+}
+main .rumah-sakit {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  margin: 20px 0px;
+  border: 1px solid gray;
+  border-top: 5px solid #ff7000;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+main .rumah-sakit .card .card-header {
+  background-color: #006fff;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 0.5px;
+}
+main .rumah-sakit .card .card-body {
+  background-color: white;
+  color: #333;
+  padding: 20px 30px;
+}
+main .rumah-sakit .card .card-body .dataTables_length {
+  margin-bottom: 30px;
+}
+main .rumah-sakit .card .card-body .dataTables_filter {
+  margin-bottom: 30px;
+}
+main .statitiska {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  margin: 20px 0px;
+  border: 1px solid gray;
+  border-top: 5px solid #ff7000;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+main .statitiska .card .card-header {
+  background-color: #006fff;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 0.5px;
+}
+main .statitiska .card .card-body {
   background-color: white;
   color: #333;
   padding: 20px 30px;
