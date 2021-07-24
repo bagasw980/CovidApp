@@ -88,11 +88,23 @@
                                   <div class="form-check">
                                     <input class="form-check-input" type="radio" name="kategori" value="lansia" required id="lansia">
                                     <label class="form-check-label" for="lansia">
-                                      Lansia (Usia >= 60 tahun)
+                                      Lansia (Usia >= 60)
                                     </label>
                                   </div>
                             </div>
                         </div>
+                        <div class="row align-items-start mb-3">
+                          <div class="col-sm-4">
+                            <label for="tempat" class="col-form-label text-right">Tempat Vaksinasi :</label>
+                          </div>
+                          <div class="col-sm-8">
+                            <select class="form-select" id="tempat" name="tempat" aria-placeholder="Pilih Tempat Vaksinasi" required>
+                              @foreach ($data as $item)
+                                  <option value="{{$item['name']}}">{{$item['name']}}</option>
+                              @endforeach
+                            </select>
+                          </div>
+                      </div>
                         <div class="row align-items-start mb-3">
                             <div class="col-sm-4">
                               <label for="nohp" class="col-form-label text-right">No HP :</label>
@@ -105,7 +117,7 @@
                         
                         <div class="row align-items-start mb-3">
                             <div class="col-sm-4">
-                              <label for="alamat" class="col-form-label text-right">No HP :</label>
+                              <label for="alamat" class="col-form-label text-right">Alamat :</label>
                             </div>
                             <div class="col-sm-8">
                                 <textarea class="form-control" id="alamat" name="alamat" aria-describedby="alamatHelp" required></textarea>

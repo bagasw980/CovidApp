@@ -20,6 +20,9 @@ class CreateRegistrasiVaksinsTable extends Migration
             $table->string('kelamin');
             $table->string('nohp');
             $table->string('kategori');
+            $table->string('tempat');
+            $table->string('alamat');
+            $table->date('jadwal');
             $table->timestamps();
         });
     }

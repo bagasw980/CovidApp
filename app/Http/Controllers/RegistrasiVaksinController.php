@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\RegistrasiVaksin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class RegistrasiVaksinController extends Controller
 {
@@ -14,7 +15,9 @@ class RegistrasiVaksinController extends Controller
      */
     public function index()
     {
-        return view('registrasi');
+        $response = Http::get('http://dekontaminasi.com/api/id/covid19/hospitals');
+        $data = $response->json();
+        return view('registrasi', ['data' => $data]);
     }
 
     /**
@@ -35,7 +38,18 @@ class RegistrasiVaksinController extends Controller
      */
     public function store(Request $request)
     {
-        echo $request;
+        $request->validate([
+            'nik' => ['unique:registrasi_vaksins,nik'],
+        ]);
+        RegistrasiVaksin::insert([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'kelamin' => $request->kelamin,
+            'lahir' => $request->lahir,
+            'kategori' => $request->kategori,
+            'nohp' => $request->nohp,
+            'alamat' => $request->alamat,
+        ]);
     }
 
     /**
