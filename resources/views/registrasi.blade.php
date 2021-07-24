@@ -1,6 +1,9 @@
 @extends('template')
 @section('title', 'Registrasi Vaksinasi Covid')
 @section('content')
+@if (\Session::has('success'))
+<div class="alert alert-danger">Terimakasih<br>Anda telah terdaftar program vaksinasi, selanjutnya silahkan cek pada menu cek status pendaftaran.</div>
+@endif
 <div class="container">
     <h1>Registrasi Vaksinasi Covid</h1>
     <div class="registrasi">

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\RegistrasiVaksin;
+use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 
 class RegistrasiVaksinController extends Controller
 {
@@ -38,6 +41,8 @@ class RegistrasiVaksinController extends Controller
      */
     public function store(Request $request)
     {
+        $e = date("d") + 2;
+        $now = date("Y-m-$e");
         $request->validate([
             'nik' => ['unique:registrasi_vaksins,nik'],
         ]);
@@ -46,10 +51,14 @@ class RegistrasiVaksinController extends Controller
             'nama' => $request->nama,
             'kelamin' => $request->kelamin,
             'lahir' => $request->lahir,
-            'kategori' => $request->kategori,
             'nohp' => $request->nohp,
+            'tempat' => $request->tempat,
+            'kategori' => $request->kategori,
             'alamat' => $request->alamat,
+            'jadwal' => $now,
         ]);
+        Session::flash('success');
+        return  redirect()->back();
     }
 
     /**
