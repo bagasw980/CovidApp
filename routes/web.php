@@ -22,3 +22,4 @@ Route::get('/statitiska', [StatitiskaController::class, 'index']);
 Route::get('/rumah-sakit-rujukan', [DataRujukanController::class, 'index']);
 Route::get('/registrasi-vaksinasi', [RegistrasiVaksinController::class, 'index']);
 Route::post('/registrasi-vaksinasi/post', [RegistrasiVaksinController::class, 'store']);
+Route::post('/registrasi-vaksinasi/show', [RegistrasiVaksinController::class, 'show']);

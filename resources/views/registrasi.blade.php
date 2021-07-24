@@ -8,6 +8,16 @@
     <h1>Registrasi Vaksinasi Covid</h1>
     <div class="registrasi">
         <div class="card border-secondary mb-3">
+            <div class="card-header border-secondary text-center">
+              <form action="/registrasi-vaksinasi/show" method="POST">
+               @csrf
+                <input class="col-sm-6" type="number" name="cari" placeholder="Masukkan NIK anda" id="cari">
+                <button class="btn btn-warning">Lihat Kartu</button>
+              </form>
+            </div>
+            </div>
+         </div>
+        <div class="card border-secondary mb-3">
             <div class="card-header border-secondary"><i class="fa fa-exclamation-triangle"></i> Syarat Mengikuti Vaksinasi</div>
             <div class="card-body">
               <h5 class="card-title">Sebelum anda diberikan vaksin, anda harus memenuhi syarat - syarat berikut ini.</h5>

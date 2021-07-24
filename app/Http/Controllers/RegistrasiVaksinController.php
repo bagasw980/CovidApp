@@ -67,9 +67,9 @@ class RegistrasiVaksinController extends Controller
      * @param  \App\Models\RegistrasiVaksin  $registrasiVaksin
      * @return \Illuminate\Http\Response
      */
-    public function show(RegistrasiVaksin $registrasiVaksin)
+    public function show(Request $request)
     {
-        //
+        $data = RegistrasiVaksin::where('nik', $request->nik)->first();
     }
 
     /**
